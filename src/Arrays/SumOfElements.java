@@ -3,12 +3,12 @@ package Arrays;
 import java.util.Scanner;
 
 public class SumOfElements {
-    public static void reverseArray(int array[]){
-        for(int i=0;i<array.length/2;i++){
-            int temp=array[i];
-            array[i]=array[array.length-i-1];
-            array[array.length-i-1]=temp;
+    public static int sumArray(int[] arr){
+        int sum=0;
+        for(int i=0;i<arr.length;i++){
+           sum=sum+arr[i];
         }
+        return sum;
     }
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
@@ -22,9 +22,8 @@ public class SumOfElements {
             arr[i]=scanner.nextInt();
         }
 
-        reverseArray(arr);
-        for(int value:arr){
-            System.out.print(value+"\t");
-        }
+       int sum = sumArray(arr);
+        System.out.print("Sum of Array: "+ sum);
+
     }
 }
